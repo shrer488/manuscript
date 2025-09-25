@@ -1,18 +1,93 @@
 body{
+    background-color: black;
     font-family: Helvetica, sans-serif;
-    color: black;
+    color: white;
     padding: 3rem;
 }
 
+p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.70);
+}
 
-h1{
-  font-family: "Jaini Purva", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 308px;
+.heading_background, h1{
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 400;
+    font-size: 308px;
+}
+
+h2{
+    font-size: 32px;
+    color: white;
+}
+
+/* Article details */
+.article_details p{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.article_details strong{
+    font-weight: 400;
+}
+
+/* Neomania hdeading in the background */
+.heading_background{
+    line-height: 308px;
+    color: none;
+    stroke: 1px white solid;
+}
+
+/* mid quote block */
+.mid_quote_block{
+    background-color: #BACC9E;
+}
+
+.mid_quote_quote {
+    color: #000;
+    font-family: "Jaini Purva";
+    font-size: 130px;
+    font-weight: 400;
+    line-height: 100px;
+}
+
+.mid_quote_author{
+    color: #000;
+    font-family: Helvetica;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
 }
 
 
+/* My thoughts have a different color */
 
-*:not(:first-child) {margin-block-start: 1rem;}
+.my_thoughts h2{
+    color: rgba(213, 234, 180);
+}
+
+.my_thoughts p{
+    color: rgba(213, 234, 180, 0.80);
+}
+
+/* Quotes */
+.quote em{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/* Citation */
+footer small{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.40);
+}
+
+
+/* *:not(:first-child) {margin-block-start: 1rem;} */
 
