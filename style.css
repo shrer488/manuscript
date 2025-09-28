@@ -5,85 +5,136 @@ body{
     font-size: 1rem;
 }
 
-hr{
-    width: 100%;
-    height: 1rem;
-    color: white;
-}
-
 p{
     font-size: 1.25rem;
     font-weight: 300;
-    line-height: 150%;
-    color: rgba(255, 255, 255, 0.70);
-}
-
-article{
-    padding-inline-start: 10%;
-    padding-inline-end: 10%;
-}
-
-.heading_background, h1{
-    font-family: "Jaini Purva", system-ui;
-    font-weight: 400;
-    font-size: 20rem;
+    line-height: 158%;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.60);
 }
 
 h2{
-    font-size: 32px;
-    color: white;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.80);
+    margin-block-end: 1.5rem;
+}
+
+nav{
+    display: flex;
+    padding-inline: 5%;
+
+}
+
+article{
+    padding-inline: 16rem;
+    padding-inline: 18%;
+
+    /* background-color: red; */
+    inline-size: 100%;
+
+    /* max-inline-size: 180rem; */
+
+    margin-block: 8rem;
+    
+    p{
+        margin-block-end: 2rem;
+    }
+    
+    p:last-child{
+        margin-block-end: 0;
+    }
 }
 
 /* Article details */
-.article_details p{
-    font-size: 16px;
-    font-weight: 700;
-}
 
-.article_details strong{
+
+
+
+/* Neomania heading in ATF*/
+
+h1{
+    font-family: "Jaini Purva", system-ui;
     font-weight: 400;
+    font-size: 20rem;
+    line-height: 100%;
+    letter-spacing: 0em;
+    display: block;
+    text-align: center;
+    position: relative;
 }
 
-/* Neomania heading in the background */
-.heading_background{
-    line-height: 308px;
-    color: none;
-    stroke: 1px white solid;
+
+h1::before{
+    /* positioning and content */
+    content: "Neomania";
+    position: absolute;
+    bottom: 30%;
+
+
+    /* used webkit and information from this website to ad the stroke and gradient
+    https://www.html-code-generator.com/css/text-stroke-generator#:~:text=How%20To%20Add%20Gradient%20or%20Mask%20With%20An%20Image%20To%20Text%20Stroke%20(Border) */
+    
+	-webkit-text-stroke-width: 0.05rem; /* might need to add calc for bigger screens because it is too thin and not visisble in them */
+	-webkit-text-stroke-color: transparent;
+	color: black; /*tried doing transparent but did not work */
+	
+    /* gradient */
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
+	
+	-webkit-background-clip: text;
+
+    z-index: -1; /*to bring text to the back*/
 }
 
-/* blockquote:
-the quote in the middle of the texts */
+
+/* line for the atf */
+header{
+    border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+}
+
+
+
+/* BLOCKQUOTE: the quote in the middle of the texts */
+
 blockquote p{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: italic;
     font-weight: 500;
-    line-height: 30px;
+    /* it got its line height from the p above so no need to give it here */
 }
 
 
-/* main quote: 
+
+/* MAIN QUOTE: 
 the giant quote in the middle of the page. 
 This is the one which we want the quote arks and the main text+author to be layed one after another */
 
 .main_quote{
     background-color: #BACC9E;
     padding-inline: 5%;
+    padding-block: 2%;
+    display: flex;
+    justify-content: center;
+
     
     p, blockquote{
         color: #000;
         font-family: "Jaini Purva";
-        font-size: 130px;
+        font-size: 6rem;
         font-weight: 400;
-        line-height: 100px;
+        line-height: 1.6cap;
+    }
+
+    p:first-child{
+        font-size: 10rem;
     }
 
     p:last-child{
-       color: #000;
         font-family: Helvetica;
-        font-size: 32px;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 48px; 
+        /* line-height: 48px;  */
     }
 }
 
@@ -91,20 +142,27 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 /* My thoughts have a different color */
 
-.my_thoughts h2{
-    color: rgba(213, 234, 180);
-}
+.my_thoughts{
+    h2{
+        color: rgba(213, 234, 180, 0.80);
+    }
 
-.my_thoughts p{
-    color: rgba(213, 234, 180, 0.80);
+    p{
+        color: rgba(213, 234, 180, 0.60);
+    }
 }
-
 
 /* Citation */
 footer small{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    font-weight: 300;
     color: rgba(255, 255, 255, 0.40);
+    background-color: rgb(255, 255, 255, 0.10);
+    display: block;
+    text-align: center;
+    padding-block: 0.5rem;
+    border-block-start: rgb(255, 255, 255, 0.20) 0.03rem solid;
 }
 
 
