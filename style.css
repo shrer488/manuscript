@@ -1,24 +1,19 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body{
+:root {
     background-color: #000;
     font-family: Helvetica, sans-serif;
-    color: white;
+    scroll-behavior: smooth;
+    /* color: white; */
     font-size: 1rem;
-}
-
-p{
-    font-size: 1.25rem;
+    /* line-height: 158%; */
     font-weight: 300;
-    line-height: 158%;
     letter-spacing: 0.05em;
     color: rgba(255, 255, 255, 0.60);
 }
 
+
 h2{
     font-size: 2rem;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.80);
     margin-block-end: 1.5rem;
 }
@@ -31,7 +26,7 @@ nav{
     width: 100%;
     background-color: #000;
     position: fixed;
-    top: 0;
+    inset-block-start: 0;
     text-transform: uppercase;
 }
 
@@ -47,6 +42,9 @@ article{
 
     
     p{
+        font-size: 1.25rem;
+        line-height: 158%;
+        letter-spacing: 0.05em;
         margin-block-end: 2rem;
     }
     
@@ -58,8 +56,9 @@ article{
 
 /* Neomania heading in ATF*/
 
-h1, .back_to_top a{
+h1{
     font-family: "Jaini Purva", system-ui;
+    color: white;
     font-weight: 400;
     font-size: 20rem;
     line-height: 100%;
@@ -67,17 +66,18 @@ h1, .back_to_top a{
     display: block;
     text-align: center;
     position: relative;
+    
 }
 
 
-h1::before, h1::after, .back_to_top a::before, .back_to_top a::after{
+h1::before, h1::after{
     /* positioning and content */
     content: "Neomania";
     position: absolute;
-    bottom: 30%;
+    inset-block-end: 30%;
     font-size: 21rem;
-    inline-size: 100%;
-    left: 0%;
+    inset-inline-start: 0%;
+    
 
     /* used webkit and information from this website to ad the stroke and gradient
     https://www.html-code-generator.com/css/text-stroke-generator#:~:text=How%20To%20Add%20Gradient%20or%20Mask%20With%20An%20Image%20To%20Text%20Stroke%20(Border) */
@@ -95,7 +95,7 @@ h1::before, h1::after, .back_to_top a::before, .back_to_top a::after{
 }
 
 h1::after{
-    bottom: 60%;
+    inset-block-end: 60%;
     z-index: -2;
     font-size: 22rem;
 }
@@ -111,12 +111,16 @@ header{
     border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;  /*line for the atf */
     block-size: 100vh;
     text-align: center;
-    max-block-size: 50rem;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    place-items: center;
+
+
     section{
         display: block;
         align-items: left;
-        overflow: hidden;
+        overflow: visible;
     }
     
     p{
@@ -129,10 +133,10 @@ header{
 }
 
 
-
+/* SCROLLING */
 /* scrolling to reading */
 
-.read_about_it{
+.read_about_it, .back_to_top{
     border: rgb(255, 255, 255, 0.50) 0.06rem solid;
     padding-block: 1rem;
     padding-inline: 1rem;
@@ -141,16 +145,19 @@ header{
     display: inline-block;
 }
 
-.read_about_it:hover{
+.read_about_it:hover, .back_to_top:hover{
     background-color: #BACC9E;
     color: black;
 }
 
 .reading{
   overflow-y: scroll;
-
 }
 
+.back_to_top{
+    border-radius: 2rem 2rem 0rem 0rem;
+    border-block-end: 0;
+}
 
 /* BLOCKQUOTE: the quote in the middle of the texts */
 
@@ -163,20 +170,22 @@ blockquote p{
 
 
 
-/* MAIN QUOTE: 
-the giant quote in the middle of the page. 
+/* AUTHOR QUOTE & MY QUOTE: 
+the giant quote in the middle of the page and end of the page. 
 This is the one which we want the quote arks and the main text+author to be layed one after another */
 
-.main_quote{
+.author_quote, .my_quote{
     background-color: #BACC9E;
     padding-inline: 5%;
     padding-block-start: 2%;
     padding-block-end: 3%;
-    display: flex;
-    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
 
     section{
         position: relative;
+        padding-inline-start: 2rem;
     }
 
     section::before{
@@ -190,6 +199,7 @@ This is the one which we want the quote arks and the main text+author to be laye
         font-size: 6rem;
         font-weight: 400;
         line-height: 1.6cap;
+        inset-inline-start: 0rem;
     }
 
     blockquote{
@@ -206,6 +216,16 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 }
 
+.my_quote{
+    padding-block-end: 0;
+    background-color: #000;
+    border-block-start: rgb(255, 255, 255, 0.50) 0.06rem solid;
+    
+    section::before, blockquote, p{
+        /* color: #BACC9E; */
+        color: white;
+    }
+}
 
 
 /* My thoughts have a different color */
@@ -216,12 +236,13 @@ This is the one which we want the quote arks and the main text+author to be laye
     }
 
     p{
-        color: rgba(213, 234, 180, 0.60);
+        font-weight: 300;
+        color: rgba(213, 234, 180, 0.80);
     }
 }
 
 /* Back to top */
-
+/* 
 .back_to_top{
     padding-block: 2rem;
     padding-block-end: 12%;
@@ -234,15 +255,16 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 .back_to_top a::before, .back_to_top a::after{
     content: "Back to Top";
-    bottom: -30%;
+    inset-block-end: -30%;
     font-size: 8rem;
 }
 
+
 .back_to_top a::after{
-     bottom: -60%;
+    inset-block-end: -60%;
     z-index: -2;
     font-size: 10rem;
-}
+} */
 
 
 
