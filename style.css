@@ -55,10 +55,6 @@ article{
     }
 }
 
-/* Article details */
-
-
-
 
 /* Neomania heading in ATF*/
 
@@ -179,8 +175,16 @@ This is the one which we want the quote arks and the main text+author to be laye
     display: flex;
     justify-content: center;
 
+    section{
+        position: relative;
+    }
+
+    section::before{
+        content: "“";
+        position: absolute;
+    }
     
-    p, blockquote{
+    section::before, blockquote, p{
         color: #000;
         font-family: "Jaini Purva";
         font-size: 6rem;
@@ -192,17 +196,14 @@ This is the one which we want the quote arks and the main text+author to be laye
         margin-block-end: 2rem;
     }
 
-    p:first-child{
-        font-size: 10rem;
-    }
-
-    p:last-child{
+    p{
         font-family: Helvetica;
         font-size: 2rem;
         font-style: normal;
         font-weight: 700;
         /* line-height: 48px;  */
     }
+
 }
 
 
@@ -223,6 +224,8 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 .back_to_top{
     padding-block: 2rem;
+    padding-block-end: 12%;
+
 }
 
 .back_to_top a{
