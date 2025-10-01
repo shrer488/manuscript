@@ -27,16 +27,12 @@ h2{
 nav{
     padding-inline: 5%;
     border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-    display: block;
+    display: flex;
     width: 100%;
     background-color: #000;
     position: fixed;
     top: 0;
-
-    p{
-        display: inline-block;
-    }
-
+    text-transform: uppercase;
 }
 
 article{
@@ -113,31 +109,26 @@ h1::after{
 }
 
 
-/* ARTICLE DETAIL */
-
-.article_details{
-    display: inline-block;
-}
-
-.article_details dd{
-    color: #BACC9E;
-    font-size: 2rem;
-    font-weight: 600;
-    display: inline-block;
-}
-
 /* HEADER */
 
 header{
-    border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid; /* line for the atf */
+    border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;  /*line for the atf */
     block-size: 100vh;
     text-align: center;
     max-block-size: 50rem;
-
+    
     section{
         display: block;
         align-items: left;
         overflow: hidden;
+    }
+    
+    p{
+        color: #BACC9E;
+        font-size: 2rem;
+        font-weight: 600;
+        display: inline-block;
+        z-index: 2;
     }
 }
 
