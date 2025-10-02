@@ -7,7 +7,7 @@
     /* line-height: 158%; */
     font-weight: 300;
     letter-spacing: 0.05em;
-    color: rgba(255, 255, 255, 0.60);
+    color: rgba(255, 255, 255, 0.70);
 }
 
 
@@ -77,6 +77,7 @@ h1::before, h1::after{
     inset-block-end: 30%;
     font-size: 21rem;
     inset-inline-start: 0%;
+    margin-inline-start: -2.5rem;
     
 
     /* used webkit and information from this website to ad the stroke and gradient
@@ -98,6 +99,7 @@ h1::after{
     inset-block-end: 60%;
     z-index: -2;
     font-size: 22rem;
+    margin-inline-start: -5rem;
 }
 
 .heading{
@@ -177,8 +179,9 @@ This is the one which we want the quote arks and the main text+author to be laye
 .author_quote, .my_quote{
     background-color: #BACC9E;
     padding-inline: 5%;
-    padding-block-start: 2%;
-    padding-block-end: 3%;
+    padding-block-start: 4%;
+    padding-block-end: 6%;
+    text-align: center;
     align-items: center;
     /* display: flex; */
     /* justify-content: center; */
@@ -188,12 +191,12 @@ This is the one which we want the quote arks and the main text+author to be laye
         padding-inline-start: 2rem;
     }
 
-    section::before{
+    /* section::before{
         content: "“";
         position: absolute;
-    }
+    } */
     
-    section::before, blockquote, p{
+    blockquote, p{
         color: #000;
         font-family: "Jaini Purva";
         font-size: 6rem;
@@ -216,8 +219,8 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 }
 
-.my_quote{
-    padding-block-end: 0;
+.author_quote{
+    /* padding-block-end: 0; */
     background-color: #000;
     border-block-start: rgb(255, 255, 255, 0.50) 0.06rem solid;
     
@@ -227,18 +230,46 @@ This is the one which we want the quote arks and the main text+author to be laye
     }
 }
 
+.my_quote{
+    blockquote, p{
+        color: #000;
+        /* font-family: "Jaini Purva"; */
+        font-family: "Spline Sans Mono";
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.6cap;
+        inset-inline-start: 0rem;
+    }
+}
+
 
 /* My thoughts have a different color */
 
 .my_thoughts{
+    background: linear-gradient(180deg, #BACC9E -49.04%, #000 102.08%);
+    color: white;
+    margin-block: 0;
+    padding-block: 12rem;
+    font-family: "Spline Sans Mono";
+    position: relative;
+    
+    
     h2{
-        color: rgba(213, 234, 180, 0.80);
+        color: white;
+        position: absolute;
+    }
+
+    section{
+        padding-inline-start: 16rem;
     }
 
     p{
-        font-weight: 300;
-        color: rgba(213, 234, 180, 0.80);
+        font-size: 1.05rem;
+        font-weight: 400;
+        /* color: rgba(213, 234, 180, 0.80); */
     }
+
+
 }
 
 /* Back to top */
