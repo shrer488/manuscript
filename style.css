@@ -158,6 +158,11 @@ header{
 
 .reading{
   overflow-y: scroll;
+
+  mark{
+    background-color: #BACC9E;
+    color: #000;
+  }
 }
 
 .back_to_top{
@@ -272,17 +277,39 @@ This is the one which we want the quote arks and the main text+author to be laye
     
     h2{
         color: white;
-        position: absolute;
+        position: sticky;
+        top: 6rem;
+        margin-block-end: 0;
     }
 
     section{
         padding-inline-start: 16rem;
-    }
 
+    }
+    
+    .my_thoughts_first_paragraph{
+        margin-block-start: -4rem;
+    }
+    
     p{
         font-size: 1.05rem;
         font-weight: 400;
         /* color: rgba(213, 234, 180, 0.80); */
+    }
+    
+
+    .inbetween_quote{
+        background-color: #bacc9e53;
+        padding: 1rem;
+        padding-inline-start: 2rem;
+        border-inline-start: white 0.1rem solid;
+        margin-block-end: 2rem;
+        border-radius: 0rem 1rem 1rem 0rem;
+        font-size: 2rem;
+
+        blockquote{
+            margin-block-end: 1rem;
+        }
     }
 
 
@@ -354,6 +381,7 @@ footer{
     a:hover{
         background: #BACC9E;
         color: #000;
+        font-weight: 550;
     }
 }
 
