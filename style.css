@@ -329,6 +329,34 @@ footer small{
     border-block-start: rgb(255, 255, 255, 0.20) 0.03rem solid;
 }
 
+footer{
+        /* border-block: rgb(255, 255, 255, 0.50) 0.06rem solid; */
+        /* display: flex; */
+        inline-size: 100%;
+
+    a{
+        padding: 1.5rem;
+        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+        display: inline-block;
+        inline-size: 33%;
+        text-align: center;
+    }
+
+    a:last-child{
+        border-block-end:none;
+
+    }
+
+    a::after{
+        content: "↗";
+    }
+
+    a:hover{
+        background: #BACC9E;
+        color: #000;
+    }
+}
+
 
 /* *:not(:first-child) {margin-block-start: 1rem;} */
 
