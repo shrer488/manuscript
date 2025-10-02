@@ -153,8 +153,8 @@ header{
 }
 
  .back_to_top:hover{
-
- }
+    text-decoration: underline;
+}
 
 .reading{
   overflow-y: scroll;
@@ -237,6 +237,8 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 .my_quote{
     padding-block:8%;
+    display: inline-block;
+    inline-size: 100%;
 
     blockquote, p{
         color: #000;
@@ -251,6 +253,8 @@ This is the one which we want the quote arks and the main text+author to be laye
 
     blockquote{
         margin-block-end: 0rem;
+        max-inline-size: 40rem;
+        text-align: left;
     }
 }
 
@@ -317,7 +321,8 @@ footer small{
     letter-spacing: 0.05em;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.40);
-    background-color: rgb(255, 255, 255, 0.10);
+    /* background-color: rgb(255, 255, 255, 0.10); */
+    background-color: #BACC9E;
     display: block;
     text-align: center;
     padding-block: 0.5rem;
