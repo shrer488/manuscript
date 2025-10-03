@@ -1,6 +1,6 @@
 :root {
     background-color: #000;
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
     /* color: white; */
     font-size: 1rem;
@@ -98,7 +98,7 @@ article{
 /* Neomania heading in ATF*/
 
 h1{
-    font-family: "Jaini Purva", system-ui;
+    font-family: "Jaini Purva", "Kokila", system-ui, s;
     color: white;
     font-weight: 400;
     font-size: 20rem;
@@ -193,6 +193,7 @@ header{
 .read_about_it:hover{
     background-color: #BACC9E;
     color: black;
+    font-weight: 500;
 }
 
  .back_to_top:hover{
