@@ -387,10 +387,9 @@ This is the one which we want the quote arks and the main text+author to be laye
         font-size: 2rem;
         padding-inline: 1rem;
         padding-block: 1rem; */
-        /* border-radius: 0.5rem;
-        text-decoration: underline;
-        text-decoration-style: wavy; */
-
+        /* border-radius: 0.5rem;*/
+        text-decoration: underline 0.2rem; 
+        text-underline-offset: 1rem;
     }
   
     section{
