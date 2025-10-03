@@ -39,12 +39,36 @@ h2{
 nav{
     padding-inline: 5%;
     border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-    display: flex;
-    width: 100%;
+    /* display: flex; */
+    /* width: 100%; */
     background-color: #000;
     position: fixed;
     inset-block-start: 0;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    inline-size: 100%;
+    z-index: 3;
+
+    a{
+        padding: 0.2rem;
+        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+        display: inline-block;
+        inline-size: 33%;
+        text-align: center;
+    }
+
+    a:last-child{
+        border-inline-end:none;
+
+    }
+
+    a:hover{
+        color: #BACC9E;
+    }
+
+    a:first-child::after{
+        content: "↗";
+        margin-inline-start: 0.2rem;
+    }
 }
 
 article{
@@ -200,7 +224,33 @@ header{
   mark{
     background-color: #BACC9E;
     color: #000;
-}
+
+    }
+
+    blockquote{
+        font-family:"Squada One";
+        color: rgba(255, 255, 255, 0.818);
+        inline-size: 40rem;
+        margin-block-end: 0.5rem;
+        padding-inline-start: 1.5rem;
+        position: relative;
+
+        p{
+        line-height: 1.2em;
+
+        }
+
+        ::before{
+            content: "“";
+            position: absolute;
+            inset-inline-start:-0.02rem ;
+        }
+    }
+
+    .quote_cite{
+     padding-inline-start: 1.6rem;
+    }
+
 
 }
 
@@ -213,24 +263,16 @@ header{
 /* BLOCKQUOTE: the quote in the middle of the texts */
 
 blockquote p{
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 500;
+    font-size: 2.5rem;
+    
+
+    font-weight: 300;
     /* it got its line height from the p above so no need to give it here */
 
     ::selection {
     color: #000;
     background-color: white;
 }
-}
-
-
-.quote_author {
-
-    mark::selection, cite::selection{
-    color: #000;
-    background-color: white;
-    }
 }
 
 
@@ -296,8 +338,7 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 .my_quote{
     padding-block:8%;
-    display: inline-block;
-    inline-size: 100%;
+
 
     blockquote, p{
         color: #000;
@@ -418,18 +459,6 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 
 /* Citation */
-footer small{
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.40);
-    /* background-color: rgb(255, 255, 255, 0.10); */
-    background-color: #BACC9E;
-    display: block;
-    text-align: center;
-    padding-block: 0.5rem;
-    border-block-start: rgb(255, 255, 255, 0.20) 0.03rem solid;
-}
 
 footer{
         /* border-block: rgb(255, 255, 255, 0.50) 0.06rem solid; */
@@ -445,7 +474,7 @@ footer{
     }
 
     a:last-child{
-        border-block-end:none;
+        border-inline-end:none;
 
     }
 
