@@ -1,10 +1,10 @@
+/* ROOT */
+/* the base property that is applied to all the properties, this is later updated as it gets cascaded */
 :root {
     background-color: #000;
     font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
-    /* color: white; */
     font-size: 1rem;
-    /* line-height: 158%; */
     font-weight: 300;
     letter-spacing: 0.05em;
     color: rgba(255, 255, 255, 0.60);
@@ -36,15 +36,14 @@ h2{
 }
 
 
+/* NAVINGATION */
+
 nav{
     padding-inline: 5%;
     border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-    /* display: flex; */
-    /* width: 100%; */
     background-color: #000;
     position: fixed;
     inset-block-start: 0;
-    /* text-transform: uppercase; */
     inline-size: 100%;
     z-index: 3;
 
@@ -71,17 +70,14 @@ nav{
     }
 }
 
+/* ARTICLE */
+
 article{
     padding-inline: 18%;
     padding-block: 7rem;
     margin-block: 4rem;
-
-    /* background-color: red; */
     inline-size: 100%;
 
-    /* max-inline-size: 180rem; */
-
-    
     p{
         font-size: 1.25rem;
         line-height: 158%;
@@ -95,7 +91,7 @@ article{
 }
 
 
-/* Neomania heading in ATF*/
+/* Neomania Section in ATF*/
 
 h1{
     font-family: "Jaini Purva", "Kokila", system-ui, s;
@@ -113,6 +109,7 @@ h1{
 
 
 h1::before, h1::after{
+
     /* positioning and content */
     content: "Neomania";
     position: absolute;
@@ -122,10 +119,10 @@ h1::before, h1::after{
     margin-inline-start: -2.5rem;
     
 
-    /* used webkit and information from this website to ad the stroke and gradient
-    https://www.html-code-generator.com/css/text-stroke-generator#:~:text=How%20To%20Add%20Gradient%20or%20Mask%20With%20An%20Image%20To%20Text%20Stroke%20(Border) */
+    /* used webkit add the stroke and gradient */
     
-	-webkit-text-stroke-width: 0.05rem; /* might need to add calc for bigger screens because it is too thin and not visisble in them */
+	-webkit-text-stroke-width: 0.05rem;
+
 	-webkit-text-stroke-color: transparent;
 	color: black; /*tried doing transparent but did not work */
 	
@@ -144,13 +141,15 @@ h1::after{
     margin-inline-start: -5rem;
 }
 
-
+/* to better position the elements at the back because they were aligning to the start of h1 and was not at center */
 .heading{
     padding-block-start: 12%;
 }
 
 
+
 /* HEADER */
+/* The entire hero section */
 
 header{
     border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;  /*line for the atf */
@@ -181,6 +180,7 @@ header{
 /* SCROLLING */
 /* scrolling to reading */
 
+/* To get to the starting of article  */
 .read_about_it{
     border: rgb(255, 255, 255, 0.50) 0.06rem solid;
     padding-block: 1rem;
@@ -196,10 +196,21 @@ header{
     font-weight: 500;
 }
 
- .back_to_top:hover{
+/* comeback link at the bottom of the page. This also scrolls you back to the top. */
+
+.back_to_top{
+    font-family: "Jaini Purva", system-ui;
+    font-size: 2.5rem;
+} 
+
+
+.back_to_top:hover{
     text-decoration: underline;
 }
 
+
+/* READING */
+/* The part that I chose to read and include in the website. */
 .reading{
 
     h2{
@@ -208,6 +219,7 @@ header{
         color: white;
     }
 
+    /* links */
     a{
         text-decoration: underline;
         text-underline-offset: 0.15rem;
@@ -218,29 +230,33 @@ header{
         color: black;
     }
 
+    /* itallic */
     em{
        font-style: italic;
     }
 
-  mark{
+    /* for highlighting  */
+    mark{
     background-color: #BACC9E;
     color: #000;
 
     }
 
+    /* The quote inside of the reading. */
     blockquote{
         font-family:"Squada One";
         color: rgba(255, 255, 255, 0.818);
         inline-size: 40rem;
         margin-block-end: 0.5rem;
-        padding-inline-start: 1.5rem;
+        padding-inline-start: 1.5rem; /*because we moved the “ out we need to move the entire text a bit in */
         position: relative;
 
+        
         p{
         line-height: 1.2em;
-
         }
 
+        /* To add the “ infront of the quote because the quote was wrapping around it if not done. */
         ::before{
             content: "“";
             position: absolute;
@@ -249,31 +265,22 @@ header{
     }
 
     .quote_cite{
-     padding-inline-start: 1.6rem;
+     padding-inline-start: 1.6rem; /*Moving the author name also a bit for alignment*/
     }
 
 
 }
 
 
-.back_to_top{
-    font-family: "Jaini Purva", system-ui;
-    font-size: 2.5rem;
-}
 
 /* BLOCKQUOTE: the quote in the middle of the texts */
 
 blockquote p{
     font-size: 2.5rem;
-    
 
     font-weight: 300;
-    /* it got its line height from the p above so no need to give it here */
+    /* the quote got its line height from the p above so no need to give it here */
 
-    ::selection {
-    color: #000;
-    background-color: white;
-}
 }
 
 
@@ -289,18 +296,6 @@ This is the one which we want the quote arks and the main text+author to be laye
     padding-block-end: 6%;
     text-align: center;
     align-items: center;
-    /* display: flex; */
-    /* justify-content: center; */
-
-    /* section{
-        position: relative;
-        padding-inline-start: 2rem;
-    } */
-
-    /* section::before{
-        content: "“";
-        position: absolute;
-    } */
     
     blockquote, p{
         color: #000;
@@ -326,12 +321,10 @@ This is the one which we want the quote arks and the main text+author to be laye
 }
 
 .author_quote{
-    /* padding-block-end: 0; */
     background-color: #000;
     border-block-start: rgb(255, 255, 255, 0.50) 0.06rem solid;
     
     section::before, blockquote, p{
-        /* color: #BACC9E; */
         color: white;
     }
 
@@ -364,8 +357,8 @@ This is the one which we want the quote arks and the main text+author to be laye
     }
 }
 
-
-/* My thoughts have a different color */
+/* MY THOUGHTS */
+/* My replies and thoughts on what the author has said. This has a different layout and color from above reading.*/
 
 .my_thoughts{
     background: linear-gradient(180deg, #BACC9E -49.04%, #000 102.08%);
@@ -381,14 +374,6 @@ This is the one which we want the quote arks and the main text+author to be laye
         position: sticky;
         top: 6rem;
         margin-block-end: 0;
-        /* display: inline-block; */
-        /* background-color: rgba(255, 255, 255, 0.144); */
-        /* border: white 0.1rem solid; */
-        /* font-weight: 300;
-        font-size: 2rem;
-        padding-inline: 1rem;
-        padding-block: 1rem; */
-        /* border-radius: 0.5rem;*/
         text-decoration: underline 0.2rem; 
         text-underline-offset: 1rem;
     }
@@ -405,7 +390,6 @@ This is the one which we want the quote arks and the main text+author to be laye
     p{
         font-size: 1.05rem;
         font-weight: 400;
-        /* color: rgba(213, 234, 180, 0.80); */
     }
 
     h2::selection, p::selection {
@@ -431,38 +415,10 @@ This is the one which we want the quote arks and the main text+author to be laye
 
 }
 
-/* Back to top */
-/* 
-.back_to_top{
-    padding-block: 2rem;
-    padding-block-end: 12%;
 
-}
-
-.back_to_top a{
-    font-size: 8rem;
-}
-
-.back_to_top a::before, .back_to_top a::after{
-    content: "Back to Top";
-    inset-block-end: -30%;
-    font-size: 8rem;
-}
-
-
-.back_to_top a::after{
-    inset-block-end: -60%;
-    z-index: -2;
-    font-size: 10rem;
-} */
-
-
-
-/* Citation */
+/* FOOTER */
 
 footer{
-        /* border-block: rgb(255, 255, 255, 0.50) 0.06rem solid; */
-        /* display: flex; */
         inline-size: 100%;
 
     a{
@@ -490,5 +446,4 @@ footer{
 }
 
 
-/* *:not(:first-child) {margin-block-start: 1rem;} */
-
+/* THE END */
