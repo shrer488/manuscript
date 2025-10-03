@@ -6,7 +6,7 @@
 <p>I feel trends move in cycles. They go and come back. So, does it really matter if you follow trend or not?</p>
 
 <hr>
-<p>In this website I started off by creating a bold design, that later changes to a minimal one, similar to the contrasting trend we have of maximalism and minimalism in design. Towards the end the website moves from a light gradient back to black, which is to depict the cycle of trends returning. When you click on the comeback in the bottom section, you are sent back to the top of the page, where all of it started. The term Neomania is the obsession of people with novelty. </p>
+<p>In this website I started off by creating a bold design, that later changes to a minimal one, similar to the contrasting trend we have of maximalism and minimalism in design. Towards the end the website moves from a light gradient back to black, which is to depict the cycle of trends returning. When you click on the comeback in the bottom section, you are sent back to the top of the page, where all of it started. The term "Neomania" is the obsession of people with novelty. And this website aims to show the viewers the cycle of trend. </p>
 
 <p>In the heading in the hero section, I wanted to replicate the literary meaning of <em>Form Follows Fashion</em>. This is also the paragraph that I chose from this essay. With the outlined texts representing form I wanted to show it following the full dressed text at the front.</p>
 
