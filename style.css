@@ -10,6 +10,7 @@
     letter-spacing: 0.05em;
     color: rgba(255, 255, 255, 0.60);
 
+    /* Added new variables */
     --green: #BACC9E;
      --text-color: rgba(255, 255, 255, 0.80);
      --spacing:1.5rem;
@@ -35,12 +36,6 @@
 
 
 body{
-
-    header{
-       
-        
-
-    }
 
     main{
 
