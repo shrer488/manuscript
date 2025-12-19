@@ -39,7 +39,6 @@ body{
 
     main{
 
-
         /* HERO */
         .hero{
             border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;  /*line for the atf */
@@ -48,7 +47,50 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
+
+             /* Neomania Section in ATF*/
+            h1{
+                font-family: var(--hero-font);
+                color: white;
+                font-weight: 400;
+                font-size: var(--h1);
+                line-height: 100%;
+                letter-spacing: 0em;
+                display: block;
+                text-align: center;
+                align-items: center;
+                position: relative;
+            }
+
+            /* Duplicate designs in the hero */
+            h1::before, h1::after{
+
+                /* positioning and content */
+                content: "Neomania";
+                position: absolute;
+                inset-block-end: 60%;
+                font-size: calc(var(--h1)+2);
+                inset-inline-start: 10%;
+                
+
+                /* used webkit add the stroke and gradient */
+                -webkit-text-stroke-width: 0.05rem;
+                -webkit-text-stroke-color: transparent;
+                color: black; /*tried doing transparent but did not work */
+                /* gradient */
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.50), rgba(0, 0, 0, 1));
+                -webkit-background-clip: text;
+                z-index: -1; /*to bring text to the back*/
+            }
+
+            h1::after{
+                inset-block-end: 120%;
+                z-index: -2;
+                font-size:calc(var(--h1)+4);
+            }
+
+
+            /* Author name */
             p{
                 color: #BACC9E;
                 font-size: var(--text-size);
@@ -57,55 +99,9 @@ body{
                 margin-block-start: 1rem;
                 z-index: 2;
             }
-
-             /* Neomania Section in ATF*/
-
-        h1{
-            font-family: var(--hero-font);
-            color: white;
-            font-weight: 400;
-            font-size: var(--h1);
-            line-height: 100%;
-            letter-spacing: 0em;
-            display: block;
-            text-align: center;
-            align-items: center;
-            position: relative;
-        }
-
-
-        h1::before, h1::after{
-            /* positioning and content */
-            content: "Neomania";
-            position: absolute;
-            inset-block-end: 60%;
-            font-size: calc(var(--h1)+2);
-            inset-inline-start: 10%;
-            /* margin-inline-start: -2.5rem; */
             
-
-            /* used webkit add the stroke and gradient */
-            -webkit-text-stroke-width: 0.05rem;
-            -webkit-text-stroke-color: transparent;
-            color: black; /*tried doing transparent but did not work */
-            /* gradient */
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.50), rgba(0, 0, 0, 1));
-            -webkit-background-clip: text;
-            z-index: -1; /*to bring text to the back*/
         }
 
-        h1::after{
-            inset-block-end: 120%;
-            z-index: -2;
-            font-size:calc(var(--h1)+4);
-            /* margin-inline-start: -5rem; */
-        }
-
-        /* to better position the elements at the back because they were aligning to the start of h1 and was not at center */
-        .heading{
-            /* padding-block-start: 12%; */
-        }
-        }
 
         /* NAVINGATION */
         nav{
@@ -141,6 +137,7 @@ body{
                 margin-inline-start: 0.2rem;
             }
         }
+
 
         /* ARTICLE */
 
@@ -197,8 +194,8 @@ body{
 
             /* The quote inside of the reading. */
             blockquote{
+
                 color: rgba(255, 255, 255, 0.818);
-                /* inline-size: 40rem; */
                 margin-block-end: calc(var(--spacing)*2);
                 padding-inline-start: 1.5rem; /* because we moved the “ out we need to move the entire text a bit in */
                 position: relative;
@@ -213,13 +210,12 @@ body{
                 }
 
                 p:first-of-type:before{
-                                        content: "“";
-                                        position: absolute;
-                                        inset-inline-start:-0.02rem ;
+                    content: "“";
+                    position: absolute;
+                    inset-inline-start:-0.02rem ;
                 }
                 
                 .quote_cite{
-                /* padding-inline-start: 1.6rem; Moving the author name also a bit for alignment */
                     font-size: var(--text-size);
                 }
             }
@@ -257,7 +253,6 @@ body{
                 font-style: normal;
                 font-weight: 400;
                 margin-block-start: 2rem;
-                /* line-height: 48px;  */
             }
 
         }
@@ -280,7 +275,6 @@ body{
 
             blockquote, p{
                 color: #000;
-                /* font-family: "Jaini Purva"; */
                 font-family: "Spline Sans Mono";
                 font-size: 1.8rem;
                 font-weight: 400;
@@ -291,7 +285,6 @@ body{
 
             blockquote{
                 margin-block-end: 0rem;
-                /* max-inline-size: 40rem; */
                 text-align: left;
             }
 
@@ -308,13 +301,10 @@ body{
             background: linear-gradient(180deg, #BACC9E -49.04%, #000 102.08%);
             color: white;
             font-family: "Spline Sans Mono";
-            /* position: relative; */
             
             
             h2{
                 color: white;
-                /* position: sticky; */
-                /* top: 6rem; */
                  font-size: 2rem;
                 font-weight: 500;
                 color: rgba(255, 255, 255, 0.80);
@@ -367,42 +357,46 @@ body{
         }
 
             }
-}
 
 
-
-
-
-
-/* FOOTER */
-
-footer{
+    /* FOOTER */
+    footer{
             display: flex;
             flex-direction: column;
 
-    a{
-        border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+            a{
+                border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+                padding: 1.5rem;
+                display: inline-block;
+                text-align: center;
+            }
 
-        padding: 1.5rem;
-        display: inline-block;
-        text-align: center;
+            a:last-child{
+                border-inline-end:none;
+
+            }
+
+            a::after{
+                content: "↗";
+            }
+
+            a:hover{
+                background: #BACC9E;
+                color: #000;
+                font-weight: 550;
+            }
     }
 
-    a:last-child{
-        border-inline-end:none;
-
-    }
-
-    a::after{
-        content: "↗";
-    }
-
-    a:hover{
-        background: #BACC9E;
-        color: #000;
-        font-weight: 550;
-    }
 }
+
+
+
+
+
+
+
+
+
 
 @media (width>500px) {
     :root{
@@ -512,10 +506,6 @@ footer{
                         font-size: 2rem;
                     }
                 }
-
-            }
-
-            .my_thoughts{
 
             }
         }
