@@ -391,11 +391,7 @@ body{
 
 
 
-
-
-
-
-
+/* BREAK-POINTS */
 
 
 @media (width>500px) {
@@ -422,9 +418,8 @@ body{
             flex-direction: row;
 
             a{
-        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-        border-block-end: 0;
-
+                border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+                border-block-end: 0;
                 inline-size: 33%;
             }
         }
