@@ -427,6 +427,18 @@ footer{
 
             }
         }
+
+        footer{
+            display: flex;
+            flex-direction: row;
+
+            a{
+        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+        border-block-end: 0;
+
+                inline-size: 33%;
+            }
+        }
     }
 }
 
@@ -510,18 +522,6 @@ footer{
 
             .my_thoughts{
 
-            }
-        }
-
-        footer{
-            display: flex;
-            flex-direction: row;
-
-            a{
-        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-        border-block-end: 0;
-
-                inline-size: 33%;
             }
         }
     }
