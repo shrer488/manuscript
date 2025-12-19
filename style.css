@@ -2,12 +2,20 @@
 /* the base property that is applied to all the properties, this is later updated as it gets cascaded */
 :root {
     background-color: #000;
+     
     font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.05em;
     color: rgba(255, 255, 255, 0.60);
+
+    --green: #BACC9E;
+     --text-color: rgba(255, 255, 255, 0.80);
+     --spacing:1.5rem;
+     --h1:5rem;
+     --text-size: 1rem;
+     --hero-font: "Jaini Purva", "Kokila", system-ui;
 
      ::selection {
         color: #000;
@@ -26,406 +34,362 @@
 }
 
 
-h2{
-    font-size: 2rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.80);
-    margin-block-end: 1.5rem;
+body{
 
-    
-}
-
-
-/* NAVINGATION */
-
-nav{
-    padding-inline: 5%;
-    border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-    background-color: #000;
-    position: fixed;
-    inset-block-start: 0;
-    inline-size: 100%;
-    z-index: 3;
-
-    a{
-        padding: 0.2rem;
-        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
-        display: inline-block;
-        inline-size: 33%;
-        text-align: center;
-    }
-
-    a:last-child{
-        border-inline-end:none;
-
-    }
-
-    a:hover{
-        color: #BACC9E;
-    }
-
-    a:first-child::after{
-        content: "↗";
-        margin-inline-start: 0.2rem;
-    }
-}
-
-/* ARTICLE */
-
-article{
-    padding-inline: 18%;
-    padding-block: 7rem;
-    margin-block: 4rem;
-    inline-size: 100%;
-
-    p{
-        font-size: 1.25rem;
-        line-height: 158%;
-        letter-spacing: 0.05em;
-        margin-block-end: 3rem;
-    }
-    
-    p:last-child{
-        margin-block-end: 0;
-    }
-}
-
-
-/* Neomania Section in ATF*/
-
-h1{
-    font-family: "Jaini Purva", "Kokila", system-ui, s;
-    color: white;
-    font-weight: 400;
-    font-size: 20rem;
-    line-height: 100%;
-    letter-spacing: 0em;
-    display: block;
-    text-align: center;
-    position: relative;
-
-   
-}
-
-
-h1::before, h1::after{
-
-    /* positioning and content */
-    content: "Neomania";
-    position: absolute;
-    inset-block-end: 30%;
-    font-size: 21rem;
-    inset-inline-start: 0%;
-    margin-inline-start: -2.5rem;
-    
-
-    /* used webkit add the stroke and gradient */
-    
-	-webkit-text-stroke-width: 0.05rem;
-
-	-webkit-text-stroke-color: transparent;
-	color: black; /*tried doing transparent but did not work */
-	
-    /* gradient */
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
-	
-	-webkit-background-clip: text;
-
-    z-index: -1; /*to bring text to the back*/
-}
-
-h1::after{
-    inset-block-end: 60%;
-    z-index: -2;
-    font-size: 22rem;
-    margin-inline-start: -5rem;
-}
-
-/* to better position the elements at the back because they were aligning to the start of h1 and was not at center */
-.heading{
-    padding-block-start: 12%;
-}
-
-
-
-/* HEADER */
-/* The entire hero section */
-
-header{
-    border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;  /*line for the atf */
-    block-size: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    place-items: center;
-
-
-    section{
-        display: block;
-        align-items: left;
-        overflow: visible;
-    }
-    
-    p{
-        color: #BACC9E;
-        font-size: 2rem;
-        font-weight: 600;
-        display: inline-block;
-        z-index: 2;
-    }
-}
-
-
-/* SCROLLING */
-/* scrolling to reading */
-
-/* To get to the starting of article  */
-.read_about_it{
-    border: rgb(255, 255, 255, 0.50) 0.06rem solid;
-    padding-block: 1rem;
-    padding-inline: 1rem;
-    color: white;
-    border-radius: 2rem;
-    display: inline-block;
-}
-
-.read_about_it:hover{
-    background-color: #BACC9E;
-    color: black;
-    font-weight: 500;
-}
-
-/* comeback link at the bottom of the page. This also scrolls you back to the top. */
-
-.back_to_top{
-    font-family: "Jaini Purva", system-ui;
-    font-size: 2.5rem;
-} 
-
-
-.back_to_top:hover{
-    text-decoration: underline;
-}
-
-
-/* READING */
-/* The part that I chose to read and include in the website. */
-.reading{
-
-    h2{
-        font-family:"Squada One";
-        font-size: 4.5rem;
-        color: white;
-    }
-
-    /* links */
-    a{
-        text-decoration: underline;
-        text-underline-offset: 0.15rem;
-    }
-
-    a:hover{
-        background-color: #BACC9E;
-        color: black;
-    }
-
-    /* itallic */
-    em{
-       font-style: italic;
-    }
-
-    /* for highlighting  */
-    mark{
-    background-color: #BACC9E;
-    color: #000;
-
-    }
-
-    /* The quote inside of the reading. */
-    blockquote{
-        font-family:"Squada One";
-        color: rgba(255, 255, 255, 0.818);
-        inline-size: 40rem;
-        margin-block-end: 0.5rem;
-        padding-inline-start: 1.5rem; /*because we moved the “ out we need to move the entire text a bit in */
-        position: relative;
-
+    header{
+       
         
-        p{
-        line-height: 1.2em;
+
+    }
+
+    main{
+
+
+        /* HERO */
+        .hero{
+            border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;  /*line for the atf */
+            block-size: 70vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            p{
+                color: #BACC9E;
+                font-size: var(--text-size);
+                font-weight: 600;
+                display: inline-block;
+                margin-block-start: 1rem;
+                z-index: 2;
+            }
+
+             /* Neomania Section in ATF*/
+
+        h1{
+            font-family: var(--hero-font);
+            color: white;
+            font-weight: 400;
+            font-size: var(--h1);
+            line-height: 100%;
+            letter-spacing: 0em;
+            display: block;
+            text-align: center;
+            align-items: center;
+            position: relative;
         }
 
-        /* To add the “ infront of the quote because the quote was wrapping around it if not done. */
-        ::before{
-            content: "“";
+
+        h1::before, h1::after{
+            /* positioning and content */
+            content: "Neomania";
             position: absolute;
-            inset-inline-start:-0.02rem ;
+            inset-block-end: 60%;
+            font-size: calc(var(--h1)+2);
+            inset-inline-start: 10%;
+            /* margin-inline-start: -2.5rem; */
+            
+
+            /* used webkit add the stroke and gradient */
+            -webkit-text-stroke-width: 0.05rem;
+            -webkit-text-stroke-color: transparent;
+            color: black; /*tried doing transparent but did not work */
+            /* gradient */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.50), rgba(0, 0, 0, 1));
+            -webkit-background-clip: text;
+            z-index: -1; /*to bring text to the back*/
         }
-    }
 
-    .quote_cite{
-     padding-inline-start: 1.6rem; /*Moving the author name also a bit for alignment*/
-    }
-
-
-}
-
-
-
-/* BLOCKQUOTE: the quote in the middle of the texts */
-
-blockquote p{
-    font-size: 2.5rem;
-
-    font-weight: 300;
-    /* the quote got its line height from the p above so no need to give it here */
-
-}
-
-
-
-/* AUTHOR QUOTE & MY QUOTE: 
-the giant quote in the middle of the page and end of the page. 
-This is the one which we want the quote arks and the main text+author to be layed one after another */
-
-.author_quote, .my_quote{
-    background-color: #BACC9E;
-    padding-inline: 5%;
-    padding-block-start: 4%;
-    padding-block-end: 6%;
-    text-align: center;
-    align-items: center;
-    
-    blockquote, p{
-        color: #000;
-        font-family: "Jaini Purva";
-        font-size: 6rem;
-        font-weight: 400;
-        line-height: 1.6cap;
-        inset-inline-start: 0rem;
-    }
-
-    blockquote{
-        margin-block-end: 2rem;
-    }
-
-    p{
-        font-family: Helvetica;
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 700;
-        /* line-height: 48px;  */
-    }
-
-}
-
-.author_quote{
-    background-color: #000;
-    border-block-start: rgb(255, 255, 255, 0.50) 0.06rem solid;
-    
-    section::before, blockquote, p{
-        color: white;
-    }
-
-}
-
-.my_quote{
-    padding-block:8%;
-
-
-    blockquote, p{
-        color: #000;
-        /* font-family: "Jaini Purva"; */
-        font-family: "Spline Sans Mono";
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 1.6cap;
-        inset-inline-start: 0rem;
-    }
-
-
-    blockquote{
-        margin-block-end: 0rem;
-        max-inline-size: 40rem;
-        text-align: left;
-    }
-
-    ::selection{
-       color: #000;
-        background-color: white; 
-    }
-}
-
-/* MY THOUGHTS */
-/* My replies and thoughts on what the author has said. This has a different layout and color from above reading.*/
-
-.my_thoughts{
-    background: linear-gradient(180deg, #BACC9E -49.04%, #000 102.08%);
-    color: white;
-    margin-block: 0;
-    padding-block: 12rem;
-    font-family: "Spline Sans Mono";
-    position: relative;
-    
-    
-    h2{
-        color: white;
-        position: sticky;
-        top: 6rem;
-        margin-block-end: 0;
-        text-decoration: underline 0.2rem; 
-        text-underline-offset: 1rem;
-    }
-  
-    section{
-        padding-inline-start: 16rem;
-
-    }
-    
-    .my_thoughts_first_paragraph{
-        margin-block-start: -3rem;
-    }
-    
-    p{
-        font-size: 1.05rem;
-        font-weight: 400;
-    }
-
-    h2::selection, p::selection {
-    color: #000;
-    background-color: white;
-    }
-    
-
-    .inbetween_quote{
-        background-color: #bacc9e53;
-        padding: 1rem;
-        padding-inline-start: 2rem;
-        border-inline-start: white 0.1rem solid;
-        margin-block-end: 3rem;
-        border-radius: 0rem 1rem 1rem 0rem;
-        font-size: 2rem;
-
-        blockquote{
-            margin-block-end: 1rem;
+        h1::after{
+            inset-block-end: 120%;
+            z-index: -2;
+            font-size:calc(var(--h1)+4);
+            /* margin-inline-start: -5rem; */
         }
-    }
+
+        /* to better position the elements at the back because they were aligning to the start of h1 and was not at center */
+        .heading{
+            /* padding-block-start: 12%; */
+        }
+        }
+
+        /* NAVINGATION */
+        nav{
+            display: flex;
+            padding-inline: 5%;
+            border-block-end: white 0.06rem solid;
+            background-color:black;
+            position: sticky;
+            inset-block-start: 0;
+            inline-size: 100%;
+            z-index: 3;
+            
+            a{
+                color: white;
+                padding: 0.2rem;
+                border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+                display: inline-block;
+                inline-size: 33%;
+                text-align: center;
+            }
+
+            a:last-child{
+                border-inline-end:none;
+
+            }
+
+            a:hover{
+                color: #BACC9E;
+            }
+
+            a:first-child::after{
+                content: "↗";
+                margin-inline-start: 0.2rem;
+            }
+        }
+
+        /* ARTICLE */
+
+        article{
+            padding-inline: var(--spacing);
+            padding-block: 4rem;
+
+            p{
+                font-size:  var(--text-size);
+                line-height: 158%;
+                margin-block-end: calc(var(--spacing)*2);
+            }
+            
+            p:last-child{
+                margin-block-end: 0;
+            }
+        }
 
 
+
+        /* READING */
+        /* The part that I chose to read and include in the website. */
+        .reading{
+
+            h2{
+                font-family:"Squada One";
+                font-size: 2.8rem;
+                color: white;
+                margin-block-end: var(--spacing);
+            }
+
+            /* links */
+            a{
+                text-decoration: underline;
+                text-underline-offset: 0.15rem;
+            }
+
+            a:hover{
+                background-color: #BACC9E;
+                color: black;
+            }
+
+            /* itallic */
+            em{
+            font-style: italic;
+            }
+
+            /* for highlighting  */
+            mark{
+            background-color: #BACC9E;
+            color: #000;
+
+            }
+
+            /* The quote inside of the reading. */
+            blockquote{
+                color: rgba(255, 255, 255, 0.818);
+                /* inline-size: 40rem; */
+                margin-block-end: calc(var(--spacing)*2);
+                padding-inline-start: 1.5rem; /* because we moved the “ out we need to move the entire text a bit in */
+                position: relative;
+
+                
+                p:first-of-type{
+                    font-family:"Squada One";
+                    font-size: calc(var(--text-size)*2);
+                    line-height: 1.2em;
+                    /* To add the “ infront of the quote because the quote was wrapping around it if not done. */
+                    margin-block-end: 1rem;
+                }
+
+                p:first-of-type:before{
+                                        content: "“";
+                                        position: absolute;
+                                        inset-inline-start:-0.02rem ;
+                }
+                
+                .quote_cite{
+                /* padding-inline-start: 1.6rem; Moving the author name also a bit for alignment */
+                    font-size: var(--text-size);
+                }
+            }
+
+
+
+        }
+
+
+
+        /* AUTHOR QUOTE & MY QUOTE: 
+        the giant quote in the middle of the page and end of the page. 
+        This is the one which we want the quote marks and the main text+author to be layed one after another */
+
+        .author_quote, .my_quote{
+            background-color: #BACC9E;
+            padding-block:calc(var(--spacing)*4) ;
+            
+            p{
+                color: #000;
+                font-family: var(--hero-font);
+                font-size: 3rem;
+                font-weight: 400;
+                line-height: 1.6cap;
+                inset-inline-start: 0rem;
+            }
+
+            blockquote{
+                margin-block-end: 2rem;
+            }
+
+            p:nth-child(2){
+                font-family: Helvetica;
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                margin-block-start: 2rem;
+                /* line-height: 48px;  */
+            }
+
+        }
+
+        .author_quote{
+            text-align: center;
+            background-color: #000;
+            border-block-start: rgb(255, 255, 255, 0.50) 0.06rem solid;
+
+            section::before, blockquote, p{
+                color: white;
+            }
+
+        }
+
+        .my_quote{
+            padding-block:calc(var(--spacing) * 4);
+            padding-inline: var(--spacing);
+
+
+            blockquote, p{
+                color: #000;
+                /* font-family: "Jaini Purva"; */
+                font-family: "Spline Sans Mono";
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 1.6cap;
+                inset-inline-start: 0rem;
+            }
+
+
+            blockquote{
+                margin-block-end: 0rem;
+                /* max-inline-size: 40rem; */
+                text-align: left;
+            }
+
+            ::selection{
+            color: #000;
+                background-color: white; 
+            }
+        }
+
+        /* MY THOUGHTS */
+        /* My replies and thoughts on what the author has said. This has a different layout and color from above reading.*/
+
+        .my_thoughts{
+            background: linear-gradient(180deg, #BACC9E -49.04%, #000 102.08%);
+            color: white;
+            font-family: "Spline Sans Mono";
+            /* position: relative; */
+            
+            
+            h2{
+                color: white;
+                /* position: sticky; */
+                /* top: 6rem; */
+                 font-size: 2rem;
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.80);
+                margin-block-end: 2rem;
+                text-decoration: underline 0.2rem; 
+                text-underline-offset: 1rem;
+            }
+            
+            p{
+                font-size: 1.05rem;
+                font-weight: 400;
+            }
+
+            h2::selection, p::selection {
+            color: #000;
+            background-color: white;
+            }
+            
+
+            .inbetween_quote{
+                background-color: #bacc9e53;
+                padding: 1rem;
+                padding-inline-start: 2rem;
+                border-inline-start: white 0.1rem solid;
+                margin-block-end: var(--spacing);
+                border-radius: 0rem 1rem 1rem 0rem;
+                font-size: 2rem;
+
+                p:first-of-type{
+                    margin-block-end: 1rem;
+
+                }
+
+            }
+
+
+        }
+
+
+        /* comeback link at the bottom of the page. This also scrolls you back to the top. */
+
+        .back_to_top{
+            font-family: "Jaini Purva", system-ui;
+            font-size: 2.5rem;
+        } 
+
+
+        .back_to_top:hover{
+            text-decoration: underline;
+        }
+
+            }
 }
+
+
+
+
 
 
 /* FOOTER */
 
 footer{
-        inline-size: 100%;
+            display: flex;
+            flex-direction: column;
 
     a{
+        border-block-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+
         padding: 1.5rem;
-        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
         display: inline-block;
-        inline-size: 33%;
         text-align: center;
     }
 
@@ -445,5 +409,120 @@ footer{
     }
 }
 
+@media (width>500px) {
+    :root{
+        --h1:8rem;
+    }
+}
 
-/* THE END */
+@media (width>750px) {
+    :root{
+        --h1:14rem;
+    }
+
+    body{
+        main{
+            article{
+            padding-inline: 18%;
+
+            }
+        }
+    }
+}
+
+
+
+@media (width>1200px) {
+    :root{
+        --h1: 20rem;
+        --text-size: 1.25rem;
+    }
+
+    body{
+        main{
+            /* HERO */
+            .hero{
+            block-size: 90vh;
+                p{
+                    font-size: 2rem;
+                    margin-block-start: 2rem;
+                }
+
+                h1{
+                    font-size: var(--h1);
+                }
+
+                h1::before{
+                    inset-block-end: 30%;
+                }
+
+                h1::after{
+                    inset-block-end: 60%;
+                }
+            }
+
+            article{
+            padding-inline: 18%;
+            padding-block: 7rem;
+
+            p{
+                font-size: var(--text-size);
+            }
+            }
+
+            .reading{
+
+                h2{
+                font-size: 4.5rem;
+
+                }
+                
+                blockquote{
+                    p:first-of-type{
+                        font-size: calc(var(--text-size)*2);
+                        max-width: 40rem;
+                    }
+
+                }
+            }
+
+            .author_quote{
+                p{
+                    font-size: 6rem;
+                    font-weight: 300;
+                }
+                p:nth-child(2){
+                font-size: 2rem;
+
+                }
+            }
+
+            .my_quote{
+                padding-inline: 18%;
+
+                blockquote{
+                    p{
+                        font-size: 2rem;
+                    }
+                }
+
+            }
+
+            .my_thoughts{
+
+            }
+        }
+
+        footer{
+            display: flex;
+            flex-direction: row;
+
+            a{
+        border-inline-end: rgb(255, 255, 255, 0.50) 0.06rem solid;
+        border-block-end: 0;
+
+                inline-size: 33%;
+            }
+        }
+    }
+}

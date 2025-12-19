@@ -1,10 +1,8 @@
 <!doctype html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Riya's Manuscript</title>
-		
-		<!-- reset -->
-		<link href="reset.css" rel="stylesheet">
 
 		<!-- Fonts -->
 		 <!-- Jaini Purav -->
@@ -22,25 +20,27 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Squada+One&display=swap" rel="stylesheet">
 
-		<!-- my style -->
-		<link href="style.css" rel="stylesheet">
+		<style>
+			@import 'reset.css' layer(reset);
+			@import 'style.css' layer(style);
+		</style>
+		
 	</head>
 	<body>
 		<header>
-			<nav>
-				<a href="https://www.emigre.com/Essays/Magazine/Neomania">Original Article</a>
-				<a href="#content_start">Chosen Paragraph</a>
-				<a href="#thoughts">Thoughts</a>
-			</nav>
-			<section>
-			<div class="heading" id="website_start">
-				<h1 >Neomania</h1>
-			</div>
-				<p>Anne Burdick.1992</p>
-			</section>
-			<a class="read_about_it" href="#content_start">Read about it</a>
+			
 		</header>
 		<main>
+			<section class="hero" id="website_start">
+				<h1>Neomania</h1>
+				<p>Anne Burdick.1992</p>
+			</section>
+			<nav>
+				<a href="https://www.emigre.com/Essays/Magazine/Neomania">Original</a>
+				<a href="#content_start">Article</a>
+				<a href="#thoughts">Thoughts</a>
+			</nav>
+			<!-- chosen reading -->
 			<article class="reading" id="content_start">
 				<h2>Form Follows Fashion</h2>
 					<p>
@@ -49,16 +49,14 @@
 					<p>
 						Weingart’s reaction is not uncommon. <mark>I, myself, am reluctant to scratch the surface of most graphic design for fear of what I won’t find underneath.</mark> In the world of so-called <em>legitimate style</em>, “trendy” is a death sentence. When stylistic change in graphic design is tied to the rapid turnover and imitative nature of fashion, we begin to suspect that our work is merely shallow trend-following and empty form-pushing.
 					</p>
-					
 					<blockquote>
 						<p>
 							I make solutions that nobody wants to problems that don’t exist.”
-						
+						</p>
+						<p class="quote_cite">
+							Alvin Lustig, <cite>Nine Pioneers</cite>
 						</p>
 					</blockquote>
-					<p class="quote_cite">
-						— Alvin Lustig, <cite>Nine Pioneers</cite>
-					</p>
 					<p>
 						In the fall of 1991, 
 						<a href="https://en.wikipedia.org/wiki/Nancy_Skolos">Nancy Skolos</a>
@@ -67,16 +65,14 @@
 			</article>
 
 			<!-- mid quote block -->
-			<section class="author_quote">
-				<section>
-					<blockquote>
-						“Neomania: a madness <br> for perpetual novelty...”
-					</blockquote>
-						<p>
-							–Roland Barthes
-						</p>
-				</section>
-			</section>
+			<blockquote class="author_quote">
+				<p>
+					“Neomania: a madness <br> for perpetual novelty...”
+				</p>
+				<p>
+					–Roland Barthes
+				</p>
+			</blockquote>
 
 			<!-- my thoughts -->
 			<article class="my_thoughts" id="thoughts">
@@ -97,28 +93,24 @@
 						<p>
 							The fear of being asked why certain design decisions were made, and not having an answer to that, and one's <em>“personal preference”</em> not being a sufficient reply can be difficult. Sometimes you don’t have answers and sometimes some people just get it and you don’t need to have a comeback. Does this have something to do with the vision? And other times the intention is not to understand your reasons at all, but to replace it. This makes me wonder: 
 						</p>
-						<section class="inbetween_quote">
-							<blockquote>
+							<blockquote class="inbetween_quote">
 								<p>
 								“Does the answer have a lot to do with the ability to communicate and convince rather than the answer itself?”
 								</p>
+								<p>—Riya Shrestha, <cite>me!</cite>
 							</blockquote>
-							<p>—Riya Shrestha, <cite>me!</cite>
 							</p>
-						</section>
 						<p>
 							Then again one might define design as <em>“problem solving”</em> so one should have a reason for design choices, and they should solve a particular problem or achieve a certain functionality. No?
 						</p>
 					</section>
 			</article>
-			<section class="my_quote">
-				<section>
-					<blockquote>
-						But, there is one thing I know for sure, trends might go, but they always
-						<a class="back_to_top" href="#website_start">come back</a>
-					</blockquote>
-					</section>
-				</section>
+
+			<!-- my quote block -->
+			<blockquote class="my_quote">
+				<p>But, there is one thing I know for sure, trends might go, but they always
+				<a class="back_to_top" href="#website_start">come back</a></p>
+			</blockquote>
 			</main>
 			<footer>
 				<a href="https://github.com/shrer488/manuscript">
