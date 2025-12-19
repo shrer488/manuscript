@@ -10,6 +10,8 @@
 
 <p>In the heading in the hero section, I wanted to replicate the literary meaning of <em>Form Follows Fashion</em>. This is also the paragraph that I chose from this essay. With the outlined texts representing form I wanted to show it following the full dressed text at the front.</p>
 
+<p>The beginning of the article starts off with a girl being suspended from school because her tshirt had a midieval typeface that looked like gang symbols. This was the same typeface that was used by the government websites and Walt Disney. This is also why I went for a vintage typeface, to make it look like gang symobols used in graphic t-shirts.</p>
+
 <hr>
 <h2>Links</h2>
 <ul>
